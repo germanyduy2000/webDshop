@@ -908,10 +908,6 @@
     margin-left: 1px;
 }
 
-.category-item {
-
-}
-
 .category-item--active .category-item__link {
     color: var(--primary-color);
 }
@@ -941,3 +937,6 @@
     right: -4px;
     color: var(--primary-color);
 }
+
+/* Home sort + filter */
+
