@@ -120,7 +120,7 @@ html {
     outline: none;
     cursor: pointer;
     color: var(--text-color);
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     line-height: 1.6rem;
@@ -146,4 +146,56 @@ html {
     height: 32px;
     font-size: 12px;
     padding: 0 8px;
+}
+
+/* Selection */
+
+.select-input {
+    font-size: 1.3rem;
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.select-input:hover .select-input__list {
+    display: block;
+}
+
+.select-input__icon {
+    font-size: 1.4rem;
+    color: rgba(131, 131, 131);
+}
+
+.select-input__list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 28px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    padding: 8px 16px;
+    list-style: none;
+    display: none;
+}
+
+.select-input__item {
+    
+}
+
+.select-input__link {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 8px 0;
+    display: block;
+}
+
+.select-input__link:hover {
+    color: var(--primary-color);
 }
