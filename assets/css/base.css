@@ -168,6 +168,7 @@ html {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    z-index: 1;
 }
 
 .select-input::before {
@@ -214,3 +215,39 @@ html {
 .select-input__link:hover {
     color: var(--primary-color);
 }
+
+/* Pagination */
+
+.pagination {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.pagination-item {
+    margin: 0 12px;
+}
+
+.pagination-item-link {
+    --height: 30px;
+    display: block;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #939393;
+    min-width: 40px;
+    height: var(--height);
+    line-height: var(--height);
+    text-align: center;
+    border-radius: 2px;
+}
+
+.pagination-item--active .pagination-item-link {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.pagination-item--active .pagination-item-link:hover {
+    background-color: #ed5c3f;
+}
+
