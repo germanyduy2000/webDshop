@@ -511,6 +511,19 @@
     color: var(--white-color);
 }
 
+/* Begin: Header nav on mobile */
+.header__mobile-nav {
+    font-size: 2.4rem;
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    color: var(--white-color);
+    display: none;
+}
+
+/* End: Header nav on mobile */
+
+
 .header__logo {
     width: 200px;
 }
