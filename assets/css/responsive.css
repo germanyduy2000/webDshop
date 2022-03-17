@@ -40,6 +40,7 @@
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.3);
         z-index: 1;
+        display: none;
     }
 
     .category__mobile {
@@ -50,24 +51,80 @@
         width: 320px;
         background-color: #fff;
         z-index: 2;
+        transform: translateX(-100%);
+        transition: transform linear 0.2s, opacity linear 0.2s;
+        animation: catFadeIn linear 0.2s;
     }
 
-    .category__mobile-heading {
+    @keyframes catFadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
 
+    .category__mobile-header {
+        display: flex;
+        position: relative;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 0 16px;
+    }
+
+    .category__mobile-header-img {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 50%;
+        display: block;
+        margin: auto 16px auto 0;
+    }
+
+    .category__mobile-header-name {
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+    .category__mobile-close {
+        position: absolute;
+        top: 10px;
+        right: 5px;
+        padding: 12px;
+        font-size: 1.6rem;
+        color: #666;
     }
 
     .category__mobile-list {
-
+        list-style: none;
+        padding: 0;
+        margin-left: 16px;
+        margin-right: 16px;
     }
 
-    .category__mobile-item {
-
+    .category__mobile-item--active .category__mobile-item-link {
+        color: #ee4d2d;
     }
 
-    .category__mobile-item-link {
-
+    .category__mobile-item-link{
+        text-decoration: none;
+        color: #333;
+        display: block;
+        padding: 14px 0;
+        font-size: 1.6rem;
     }
 
+    #category__mobile-input {
+        display: none;
+    }
+
+    #category__mobile-input:checked ~ .header__mobile-overlay {
+        display: block;
+    }
+
+    #category__mobile-input:checked ~ .category__mobile {
+        transform: translateX(0);
+    }
 
     .app__container {
         margin-top: calc(var(--header-height) + var(--header-sort-bar-height));
@@ -83,6 +140,8 @@
 
     .header__mobile-nav {
         display: block;
+        padding: 0;
+        margin-right: 14px;
     }
 }
 
@@ -147,6 +206,10 @@
         }
     }
 
+    .category__mobile {
+        width: 100%;
+        z-index: 5;
+    }
 
     .header__search-history {
         position: fixed;
@@ -175,10 +238,12 @@
     
     .header__mobile-search {
         display: block;
+        transform: translateX(-100%);
     }
 
     .header__logo-img {
         width: 110px;
+        transform: translateX(-38%);
     }
 
     .footer__content {
