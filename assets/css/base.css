@@ -33,10 +33,6 @@ html {
     margin-right: -5px;
 }
 
-.grid__column {
-
-}
-
 /* Test */
 
 .grid__column-2 {
@@ -242,4 +238,3 @@ html {
 .pagination-item--active .pagination-item-link:hover {
     background-color: #ed5c3f;
 }
-
